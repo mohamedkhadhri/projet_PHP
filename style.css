@@ -1,0 +1,28 @@
+
+body {
+    background-image: url('../projet/img/arrangement-collecte-stationnaire-moderne.jpg');
+    background-size: cover; /* Cover entire page */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed; /* Fixed background */
+    background-position: center; /* Center the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc avec 80% d'opacité */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    width: 100%;
+    max-width: 200px;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+}
