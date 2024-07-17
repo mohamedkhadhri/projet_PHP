@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Accessoires</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            margin-top: 75px;
+            display: flex;
+            flex-direction: column;
+            background-color: #f8f9fa; /* Fond gris */
+            color: #000; /* Texte en noir pour plus de lisibilité */
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.8); /* Fond de la barre de navigation */
+            position: sticky; /* Position sticky pour rester en haut de la page */
+            top: 0;
+            z-index: 1000; /* Assure que la barre de navigation est au-dessus du contenu */
+        }
+        .navbar-brand img {
+            max-height: 75px; /* Ajustez la taille de l'image selon vos besoins */
+            width: auto; /* Pour ajuster automatiquement la largeur */
+            max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+        }
+        .navbar-nav {
+            margin-left: auto; /* Aligner les éléments à droite */
+        }
+        .nav-link {
+            color: #fff; /* Couleur du texte des liens */
+            margin-left: 15px; /* Espacement entre les liens */
+            transition: color 0.3s ease; /* Transition douce pour le changement de couleur */
+        }
+        .nav-link:hover {
+            color: #ffc107; /* Couleur du texte au survol */
+            text-decoration: none; /* Supprime la soulignement par défaut */
+        }
+        .dropdown-menu {
+            background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond du menu déroulant */
+        }
+        .dropdown-item {
+            color: #fff; /* Couleur du texte des éléments du menu déroulant */
+        }
+        .dropdown-item:hover {
+            background-color: #ffc107; /* Couleur de fond au survol */
+            color: #000; /* Couleur du texte au survol */
+        }
+        /* Style pour le formulaire de recherche */
+        .search-form {
+            display: flex;
+            align-items: center;
+            margin-left: auto; /* Aligner à droite */
+            margin-right: 15px; /* Marge à droite */
+        }
+        .search-input {
+            width: 200px; /* Largeur réduite de la case de recherche */
+            margin-right: 5px; /* Espacement entre la case de recherche et le bouton */
+        }
+        .search-button {
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+        .search-button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        /* Style pour réduire la dimension des cartes */
+        .card {
+            max-width: 400px; /* Largeur maximale des cartes */
+            margin: auto; /* Centrer les cartes */
+        }
+        .carousel-inner img {
+            height: 370px; /* Ajuster la hauteur des images du carousel */
+            object-fit: cover; /* Recadrer l'image pour couvrir toute la zone */
+        }
+        .search-input.active {
+            background-color: #cce5ff; /* Couleur de fond bleue */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./img/Capture d’écran 2024-06-30 202219.png" alt="Logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="search-form d-flex" role="search">
+                <input class="form-control search-input me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success search-button" type="submit">Search</button>
+            </form>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./accueil.php">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CHARGEUR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Camera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Power bank</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ring light</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">others</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/1_2115.jpg" class="d-block w-100" alt="Image 1" data-bs-toggle="modal" data-bs-target="#productModal1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/2_814.jpg" class="d-block w-100" alt="Image 2" data-bs-toggle="modal" data-bs-target="#productModal1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/3_684.jpg" class="d-block w-100" alt="Image 3" data-bs-toggle="modal" data-bs-target="#productModal1">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">RING LIGHT PROFESSIONNEL RL-18</h5>
+                        <p class="card-text">Ring light Professionnel RL-18 - diamètre: 18" (45cm) - un outil professionnel parfait pour les maquilleurs , le streaming en direct, les youtubers - Conception spécial SMD LED qui fournit moins d'ombre et même l’ éclairage pour aider à parfaire votre peau et rendre votre regard propre avec des yeux brillants - Rotation à 360° - 3 Couleurs de lumière (Blanc, Chaud, Jaune) - Température de couleur : 2700K-6500K - Conception combine le support de téléphone et la lumière de l'anneau selfie ensemble - bague : 2.1 m</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1">Voir détails</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/camera-light-mm-4028-1.jpg" class="d-block w-100" alt="Image 1" data-bs-toggle="modal" data-bs-target="#productModal2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/camera-light-mm-4028-2.jpg" class="d-block w-100" alt="Image 2" data-bs-toggle="modal" data-bs-target="#productModal2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/camera-light-mm-4028_2.jpg" class="d-block w-100" alt="Image 3" data-bs-toggle="modal" data-bs-target="#productModal2">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">CAMERA LIGHT MM-4028</h5>
+                        <p class="card-text">Camera Light MM-4028 - Diamètre: 19" - Température de couleur: 3000K-5700K - Inclinaison : 180 degrés - Douce et uniforme, sans éblouissement, cette lampe vidéo est équipée de perles de lampe 640 SMD et utilise une plaque de guidage de lumière en acrylique, qui peut disperser l'éblouissement, rendre la lumière douce et uniforme et ne pas blesser les yeux. Idéal pour les interviews, la photographie de bébé, les conférences et YouTube - Température de couleur et luminosité réglables, cri 95+ à l'aide de la télécommande, vous pouvez régler la luminosité de 0 à 100 % .</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal2">Voir détails</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel1">RING LIGHT</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleIndicators1_modal" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators1_modal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators1_modal" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators1_modal" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/2_814.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/3_684.jpg" class="d-block w-100" alt="Image 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/4_1856.jpg" class="d-block w-100" alt="Image 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1_modal" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1_modal" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <p>Description détaillée du produit.</p>
+                    <ul>
+                      <li>Ring light Professionnel RL-18</li>
+                      <li> Rotation à 360°</li>
+                      <li>3 Couleurs de lumière (Blanc, Chaud, Jaune)</li>
+                      <li>Température de couleur : 2700K-6500K</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">CAMERA LIGHT</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleIndicators2_modal" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators2_modal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators2_modal" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators2_modal" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/camera-light-mm-4028-1.jpg" class="d-block w-100" alt="Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/camera-light-mm-4028-2.jpg" class="d-block w-100" alt="Image 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/camera-light-mm-4028-3.jpg" class="d-block w-100" alt="Image 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2_modal" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2_modal" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <p>Description détaillée du produit.</p>
+                    <ul>
+                      <li>Inclinaison : 180 degrés </li>
+                      <li>la luminosité de 0 à 100 %</li>
+                      <li> lampe 640 SMD</li>
+                      <li>Température de couleur 3000K-5700K</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Fonction pour gérer la soumission du formulaire de recherche
+      function handleSearch(event) {
+          event.preventDefault(); // Empêche le rechargement de la page par défaut
+
+          // Récupère la valeur entrée dans la case de recherche
+          let searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+
+          // Applique la classe 'active' pour la couleur de fond
+          document.getElementById('searchInput').classList.add('active');
+
+          // Vous pouvez ajouter ici la logique pour traiter searchTerm, comme filtrer les produits affichés, etc.
+          console.log('Recherche pour :', searchTerm);
+      }
+
+      // Ajoute un écouteur d'événement sur le formulaire de recherche
+      document.getElementById('searchForm').addEventListener('submit', handleSearch);
+  </script>
+</body>
+</html>
